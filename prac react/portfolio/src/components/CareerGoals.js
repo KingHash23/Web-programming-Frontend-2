@@ -1,4 +1,7 @@
-function CareerGoal() {
+// components/CareerGoals.js
+import React from 'react';
+
+function CareerGoals() {
   return (
     <section className="py-5">
       <div className="container">
@@ -13,4 +16,4 @@ function CareerGoal() {
   );
 }
 
-export default CareerGoal; 
+export default CareerGoals;
