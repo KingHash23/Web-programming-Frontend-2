@@ -2,6 +2,13 @@
 import React from 'react';
 
 function ContactSection() {
+  const iconStyle = {
+    color: '#555555',
+    fontSize: '24px',
+    margin: '0 10px',
+    transition: 'color 0.3s ease'
+  };
+
   return (
     <section id="contact" className="py-5">
       <div className="container">
@@ -15,13 +22,13 @@ function ContactSection() {
               </div>
               <div className="social-links">
                 <a href="https://github.com/KingHash23" target="_blank" rel="noopener noreferrer" className="social-link">
-                  <i className="fab fa-github"></i>
+                  <i className="fab fa-github" style={iconStyle}></i>
                 </a>
                 <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="social-link">
-                  <i className="fab fa-linkedin-in"></i>
+                  <i className="fab fa-linkedin-in" style={iconStyle}></i>
                 </a>
                 <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="social-link">
-                  <i className="fab fa-youtube"></i>
+                  <i className="fab fa-youtube" style={iconStyle}></i>
                 </a>
               </div>
             </div>

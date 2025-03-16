@@ -117,7 +117,7 @@ body {
 
 /* Table Styles */
 .table {
-  background: white;
+  background: rgb(175, 205, 224);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -130,7 +130,7 @@ body {
 }
 
 .table tbody tr:hover {
-  background-color: #f8f9fa;
+  background-color: #75a1cd;
 }
 
 /* Link Styles */
@@ -193,7 +193,7 @@ body {
 
 .social-link:hover {
   transform: translateY(-3px);
-  background-color: #2980b9;
+  background-color: #30aad3;
 }
 
 /* Text color control for different modes */
@@ -233,8 +233,8 @@ body {
   }
   
   .profile-img {
-    margin-top: 30px;
-    max-width: 200px !important;
+    margin-top: 1.0px;
+    max-width: 150px !important;
   }
 }
 
