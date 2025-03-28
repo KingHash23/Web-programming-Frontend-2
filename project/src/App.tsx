@@ -32,7 +32,8 @@ function App() {
     
     if (newMode) {
       document.body.style.backgroundColor = '#1E1E1E';
-      document.querySelector('.navbar')!.style.backgroundColor = '#121212';
+      document.querySelector('.navbar')!.style.backgroundColor = '#121212'; 
+      
     } else {
       document.body.style.backgroundColor = '#f8f9fa';
       document.querySelector('.navbar')!.style.backgroundColor = '#ffffff';
