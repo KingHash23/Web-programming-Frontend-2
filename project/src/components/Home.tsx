@@ -1,19 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import MediaGallery from './components/MediaGallery';
-import AcademicResults from './components/AcademicResults';
-import Contact from './components/Contact';
-import CareerGoals from './components/CareerGoals';
-import Login from './components/Login';
-import './index.css';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Home from './components/Home';
-import { Layout } from 'lucide-react';
-import Layoutcomponent from './components/Layout';
+import Navbar from './Navbar';
+import Hero from './Hero';
+import About from './About';
+import MediaGallery from './MediaGallery';
+import AcademicResults from './AcademicResults';
+import Contact from './Contact';
+import CareerGoals from './CareerGoals';
+import Login from './Login';
+// import './index.css';
+// import { Home } from 'lucide-react';
 
-function App() {
+function Home() {
   const [darkMode, setDarkMode] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -37,7 +34,7 @@ function App() {
     if (newMode) {
       document.body.style.backgroundColor = '#1E1E1E';
       document.querySelector('.navbar')!.style.backgroundColor = '#121212'; 
-
+      
     } else {
       document.body.style.backgroundColor = '#f8f9fa';
       document.querySelector('.navbar')!.style.backgroundColor = '#ffffff';
@@ -63,26 +60,16 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
-    <Routes>
-      <Route path="/login" element={<Home />} />
-
-
-
-      <Route path="/Home" element={<Home />} />
-      <Route path="/Layout" element={<Layoutcomponent />}/>
-      <Route path="/Login" element={<Login onLogin={handleLogin} />} />
-      <Route path="/" element={<AcademicResults/>} />
-      <Route path="/About" element={<About />} />
-      <Route path="/MediaGallery" element={<MediaGallery />} />
-      <Route path="/CareerGoals" element={<CareerGoals />} />
-      <Route path="/Hero" element={<Hero />} />
-      <Route path="/Navbar" element={<Navbar toggleMode={toggleMode} darkMode={darkMode} onLogout={handleLogout} />} />
-     
-    </Routes>
-    
-    </BrowserRouter>
+    <div style={{ backgroundColor: darkMode ? '#1E1E1E' : '#f8f9fa' }}>
+      <Navbar toggleMode={toggleMode} darkMode={darkMode} onLogout={handleLogout} />
+      <Hero />
+      <About />
+      <MediaGallery />
+      <AcademicResults />
+      <Contact />
+      <CareerGoals />
+    </div>
   );
 }
 
-export default App;
+export default Home;
