@@ -67,8 +67,6 @@ function App() {
     <Routes>
       <Route path="/login" element={<Home />} />
 
-
-
       <Route path="/Home" element={<Home />} />
       <Route path="/Layout" element={<Layoutcomponent />}/>
       <Route path="/Login" element={<Login onLogin={handleLogin} />} />
@@ -78,6 +76,8 @@ function App() {
       <Route path="/CareerGoals" element={<CareerGoals />} />
       <Route path="/Hero" element={<Hero />} />
       <Route path="/Navbar" element={<Navbar toggleMode={toggleMode} darkMode={darkMode} onLogout={handleLogout} />} />
+
+      
      
     </Routes>
     
