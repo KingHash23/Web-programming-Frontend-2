@@ -1,4 +1,3 @@
-<<<<<<< Tabnine <<<<<<<
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -11,7 +10,6 @@ import Login from './components/Login';
 import './index.css';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './components/Home';
-import { Layout } from 'lucide-react';//-
 import Layoutcomponent from './components/Layout';
 
 function App() {
@@ -60,29 +58,23 @@ function App() {
   };
 
   if (!isLoggedIn) {
-    return <Login onLogin={handleLogin} />;//-
-    return <Navigate to="/login" />;//+
+    return <Navigate to="/login" />;
   }
 
   return (
     <BrowserRouter>
     <Routes>
-      <Route path="/login" element={<Home />} />//-
-      <Route path="/login" element={<Login onLogin={handleLogin} />} />//+
+      <Route path="/login" element={<Login onLogin={handleLogin} />} />
 
       <Route path="/Home" element={<Home />} />
-      <Route path="/Layout" element={<Layoutcomponent />}/>//-
-      <Route path="/Login" element={<Login onLogin={handleLogin} />} />//-
-      <Route path="/" element={<AcademicResults/>} />//-
-      <Route path="/Layout" element={<Layoutcomponent />} />//+
+      <Route path="/Layout" element={<Layoutcomponent />} />
       <Route path="/About" element={<About />} />
       <Route path="/MediaGallery" element={<MediaGallery />} />
       <Route path="/CareerGoals" element={<CareerGoals />} />
       <Route path="/Hero" element={<Hero />} />
       <Route path="/Navbar" element={<Navbar toggleMode={toggleMode} darkMode={darkMode} onLogout={handleLogout} />} />
 
-//-
-      <Route path="/" element={<AcademicResults />} />//+
+      <Route path="/" element={<AcademicResults />} />
     </Routes>
 
     </BrowserRouter>
@@ -90,4 +82,3 @@ function App() {
 }
 
 export default App;
->>>>>>> Tabnine >>>>>>>// {"source":"chat"}
